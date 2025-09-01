@@ -4,7 +4,7 @@ resource "aws_dms_replication_task" "main" {
   source_endpoint_arn          = aws_dms_endpoint.source.endpoint_arn
   target_endpoint_arn          = aws_dms_endpoint.target.endpoint_arn
   migration_type               = "full-load-and-cdc"
-  table_mappings               = file("${path.module}/table-mappings.json")
-  replication_task_settings    = file("${path.module}/replication-settings.json")
+  table_mappings            = file("${path.module}/table_mappings.json")
+  replication_task_settings = file("${path.module}/replication_task_settings.json")
   start_replication_task       = true
 }
