@@ -26,3 +26,15 @@ provider "aws" {
     }
   }
 }
+
+provider "aws" {
+  alias   = "source"
+  region  = var.aws_region
+  profile = "source"
+}
+
+provider "aws" {
+  alias   = "target"
+  region  = var.aws_region
+  profile = "target"
+}
