@@ -23,7 +23,16 @@ variable "vpc_security_group_ids" {
 }
 
 variable "instance_class" {
+  type = string
+}
+
+variable "allocated_storage" {
+  type = number
+}
+
+variable "kms_arn" {
   type    = string
+  default = null
 }
 
 variable "port" {
